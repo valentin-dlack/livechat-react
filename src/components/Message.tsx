@@ -37,7 +37,7 @@ export default function Message({ message }: { message: MessageProps }) {
                     {state.user?.username}
                     <time className="text-xs opacity-50 ml-4">{message.time ? new Date(message.time.seconds * 1000).toLocaleDateString() : ''}</time>
                 </div>
-                <div className="chat-bubble">
+                <div className="chat-bubble break-words max-w-5xl">
                     {message.message}
                     {message.file && (
                         <div className="chat-file">
@@ -45,13 +45,13 @@ export default function Message({ message }: { message: MessageProps }) {
                                 <div>
                                     <img alt="" src={message.file.url} className='max-w-64 max-h-32 rounded-lg object-cover' />
                                     <span>{message.file.name}</span>
-                                    <button className="btn btn-xs btn-secondary ml-4">Download</button>
+                                    <a className="btn btn-xs btn-secondary ml-4" href={message.file.url} target="_blank" rel="noreferrer">Télécharger</a>
                                 </div>
                             ) : (
                                 <div>
                                     <i className="fas fa-file mr-2"></i>
                                     <span className='mr-2 border-b border-dashed border-gray-400'>{message.file.name}</span>
-                                    <button className="btn btn-xs btn-secondary ml-4">Download</button>
+                                    <a className="btn btn-xs btn-secondary ml-4" href={message.file.url} target="_blank" rel="noreferrer">Télécharger</a>
                                 </div>
                             )}
                         </div>
@@ -70,7 +70,7 @@ export default function Message({ message }: { message: MessageProps }) {
                     {currentUser?.displayName}
                     <time className="text-xs opacity-50 ml-4">{message.time ? new Date(message.time.seconds * 1000).toLocaleDateString() : ''}</time>
                 </div>
-                <div className="chat-bubble">
+                <div className="chat-bubble break-words max-w-5xl">
                     {message.message}
                     {message.file && (
                         <div className="chat-file">

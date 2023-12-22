@@ -23,6 +23,19 @@ const Signup = () => {
     const onSubmit = async (e: FormEvent) => {
       e.preventDefault()
 
+      if (!email || !password || !username || !file) {
+          setError('Veuillez remplir tous les champs !')
+          return;
+      }
+
+      if (username.length > 20) {
+        setError('Votre nom d\'utilisateur ne doit pas dépasser 20 caractères !')
+        setTimeout(() => {
+            setError('')
+        }, 3000);
+        return
+      }
+
       await createUserWithEmailAndPassword(auth, email, password)
         .then(async (userCredential) => {
             
