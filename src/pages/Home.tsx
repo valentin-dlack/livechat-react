@@ -11,7 +11,6 @@ const Home = () => {
 
     //get current user if logged in
     const user = auth.currentUser;
-    console.log(user);
  
     const handleLogout = () => {               
         signOut(auth).then(() => {

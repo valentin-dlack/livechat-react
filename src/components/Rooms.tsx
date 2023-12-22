@@ -27,16 +27,14 @@ export const Rooms = () => {
     })
   }
 
-  console.log(rooms);
-
   return (
     <ul>
-      {rooms && Object.entries(rooms).map(([key, value]) => (
+      {rooms && Object.entries(rooms).sort((a, b) => b[1].date?.seconds - a[1].date?.seconds).map(([key, value]) => (
         <li key={key} className="bg-gray-800 p-4 hover:bg-gray-700 cursor-pointer flex items-center" onClick={() => handleSelection(value.userInfos)} id={key}>
           <img src={value.userInfos.avatar} alt="" className="w-8 h-8 rounded-full" />
           <div className="flex flex-col ml-2">
             <span className="ml-2">{value.userInfos.username}</span>
-            <span className="ml-2 text-sm text-gray-400 italic">{value.lastMessage ?? 'aucun message'}</span>
+            <span className="ml-2 text-sm text-gray-400 italic">{value.lastMessage ? value.lastMessage.substring(0, 20) + (value.lastMessage.length > 20 ? '...' : '') : 'Aucun message'}</span>
           </div>
         </li>
       ))}

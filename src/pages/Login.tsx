@@ -26,7 +26,6 @@ const Login = () => {
             // Signed in
             const user = userCredential.user;
             navigate("/")
-            console.log(user);
             setLoading(false)
         })
         .catch((error) => {

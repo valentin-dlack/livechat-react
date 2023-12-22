@@ -25,7 +25,6 @@ export const Searchbar = () => {
           messages: []
         })
 
-        console.log(user);
         await updateDoc(doc(db, "userChats", currentUser.uid), {
           [`${combinedId}.userInfos`]: {
             uid: user.uid,
