@@ -18,9 +18,13 @@ export const Messages = () => {
     if (!state.chatId) return
     setLoading(true)
 
-    const unSub = onSnapshot(doc(db, "chats", state.chatId), (doc) => {
-      doc.exists() && setMessages(doc.data().messages)
+    const unSub = onSnapshot(doc(db, "chats", state.chatId), async (doc) => {
+      doc.exists() && setMessages(await doc.data().messages)
       setLoading(false)
+      setTimeout(() => {
+        const bottom = document.getElementById('bottom')
+        bottom?.scrollIntoView({ behavior: 'smooth' })
+      }, 0);
     });
 
     return () => {
@@ -34,6 +38,7 @@ export const Messages = () => {
       {!loading && messages.map((message) => (
         <Message key={message.id} message={message} />
       ))}
+      <div id="bottom"></div>
     </div>
   )
 }

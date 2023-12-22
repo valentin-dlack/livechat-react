@@ -37,7 +37,7 @@ export default function Message({ message }: { message: MessageProps }) {
                     {state.user?.username}
                     <time className="text-xs opacity-50 ml-4">{message.time ? new Date(message.time.seconds * 1000).toLocaleDateString() : ''}</time>
                 </div>
-                <div className="chat-bubble break-words max-w-5xl">
+                <div className="chat-bubble break-words max-w-3xl">
                     {message.message}
                     {message.file && (
                         <div className="chat-file">
@@ -70,7 +70,7 @@ export default function Message({ message }: { message: MessageProps }) {
                     {currentUser?.displayName}
                     <time className="text-xs opacity-50 ml-4">{message.time ? new Date(message.time.seconds * 1000).toLocaleDateString() : ''}</time>
                 </div>
-                <div className="chat-bubble break-words max-w-5xl">
+                <div className="chat-bubble break-words max-w-3xl">
                     {message.message}
                     {message.file && (
                         <div className="chat-file">
