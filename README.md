@@ -6,20 +6,24 @@ Ce projet est un chat en temps réel développé avec ReactJS en utilisant TypeS
 
 - [Projet Chat en temps réel avec ReactJS et Firebase](#projet-chat-en-temps-réel-avec-reactjs-et-firebase)
   - [Table des matières](#table-des-matières)
-  - [Prérequis](#prérequis)
+  - [RENDU DE PROJET](#rendu-de-projet)
   - [Installation](#installation)
   - [Utilisation](#utilisation)
   - [Fonctionnalités](#fonctionnalités)
   - [Auteur](#auteur)
   - [Licence](#licence)
 
-## Prérequis
+## RENDU DE PROJET
 
-Avant de commencer, assurez-vous d'avoir installé les logiciels suivants :
+**IMPORTANT :**
 
-- [NodeJS](https://nodejs.org/en/download/)
-- [NPM](https://www.npmjs.com/get-npm)
-- [Git](https://git-scm.com/downloads)
+Pour la sécurité de mon projet, je n'ai pas mis la clé API de mon projet Firebase dans le fichier de configuration. Je vous ai donc envoyé la clé API **dans le mail de rendu**.
+
+Il faudra créer un fichier `.env` à la racine du projet et y mettre la clé API de votre projet Firebase comme ceci :
+
+```
+REACT_APP_FIREBASE_API_KEY="CLE_API_FIREBASE"
+```
 
 ## Installation
 
@@ -42,7 +46,7 @@ Pour tester l'application, suivez les étapes suivantes :
 
 N'hésitez pas à explorer les fonctionnalités supplémentaires de l'application et à fournir vos commentaires.
 
-**Note :** Assurez-vous d'avoir configuré correctement les paramètres de connexion à Firebase dans le fichier de configuration approprié avant de démarrer l'application. Normalement le fichier est déjà configuré pour fonctionner avec le projet Firebase de démonstration.
+**Note :** Assurez-vous d'avoir configuré correctement les paramètres de connexion à Firebase dans le fichier de configuration approprié avant de démarrer l'application.
 
 ## Fonctionnalités
 
