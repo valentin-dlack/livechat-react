@@ -22,7 +22,7 @@ Pour la sécurité de mon projet, je n'ai pas mis la clé API de mon projet Fire
 Il faudra créer un fichier `.env` à la racine du projet et y mettre la clé API de votre projet Firebase comme ceci :
 
 ```
-REACT_APP_FIREBASE_API_KEY="CLE_API_FIREBASE"
+VITE_FIREBASE_API_KEY="CLE_API_FIREBASE"
 ```
 
 ## Installation
